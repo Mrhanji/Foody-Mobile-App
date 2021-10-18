@@ -52,8 +52,16 @@ class _SplashState extends State<Splash> {
           Positioned(
               top: size.height * 0.45,
               right: 50,left: 50,
-              child: Container(child: Image.asset('assets/logo.png'))),
-              
+              child: Container(child: Column(
+                children: [
+                  Image.asset('assets/logo.png'),
+                  SizedBox(height: size.height*0.01,),
+                  Text('Made with ♥ by Partibha',style: TextStyle(fontSize: size.height*0.023,fontWeight: FontWeight.w400),)
+                ],
+              ))),
+
+
+
         ],
       ),
     );
