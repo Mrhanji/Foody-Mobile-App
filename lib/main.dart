@@ -33,23 +33,27 @@ class _SplashState extends State<Splash> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(
-        Duration(seconds: 3),
-        () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => LoginScreen())));
+    // Timer(
+    //     Duration(seconds: 3),
+    //     () => Navigator.pushReplacement(
+    //         context, MaterialPageRoute(builder: (context) => LoginScreen())));
   }
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return Scaffold(
+    return Scaffold(backgroundColor: Colors.red,
       body: Stack(
         children: [
-          Positioned(child: Image.asset('assets/bg1.jpg')),
+          Positioned(child: Container(width: size.width, child: Image.asset('assets/bg1.jpg',fit: BoxFit.cover,))),
+            Positioned(bottom:01, left:3,child: Container(width: size.width, child: Image.asset('assets/bg2.png',fit: BoxFit.cover,))),
+        
+        
           Positioned(
               top: size.height * 0.45,
-              right: size.width * 0.17,
-              child: Image.asset('assets/logo.png')),
+              right: 50,left: 50,
+              child: Container(child: Image.asset('assets/logo.png'))),
+              
         ],
       ),
     );
