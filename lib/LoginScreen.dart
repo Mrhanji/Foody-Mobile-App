@@ -62,8 +62,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   setState(() {
                     url = 'https://foody.partibha.ml';
 
-                   
-
                     _k.reloadUrl(url);
                   });
                 },
@@ -75,7 +73,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     setState(() {
                       url = 'https://bio.link/iamparti';
 
-                   
                       _k.reloadUrl(url);
                     });
                   },
@@ -88,5 +85,3 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
-// void _launchURL() async =>
-//     await canLaunch(v) ? await launch(v) : throw 'Could not launch $_url';
