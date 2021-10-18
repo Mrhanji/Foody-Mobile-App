@@ -26,6 +26,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   http:
   flutter_webview_plugin:
+  url_launcher: 
   
   
 

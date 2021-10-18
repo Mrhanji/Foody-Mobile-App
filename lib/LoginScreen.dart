@@ -1,6 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -28,8 +31,17 @@ class _LoginScreenState extends State<LoginScreen> {
           builder: (BuildContext context) => AlertDialog(
                 title: Text("You Want to Exit App"),
                 actions: [
-                  FlatButton(onPressed: () {}, child: Text('Check Bio')),
-                  FlatButton(onPressed: () {}, child: Text('Yes')),
+                  FlatButton(
+                      onPressed: () {
+                        launch('https://bio.link/iamparti');
+                          exit(0);
+                      },
+                      child: Text('Check Bio & Exit')),
+                  FlatButton(
+                      onPressed: () {
+                        exit(0);
+                      },
+                      child: Text('Yes')),
                   FlatButton(
                       onPressed: () {
                         _k.show();
