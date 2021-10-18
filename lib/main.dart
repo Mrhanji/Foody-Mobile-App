@@ -1,9 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:foody/LoginScreen.dart';
 
-void main() => runApp(SplashScreen());
+Future main() async{
+   //SystemChrome.setEnabledSystemUIOverlays([]);
+  runApp(SplashScreen());
+}
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
